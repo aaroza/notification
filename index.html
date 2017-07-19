@@ -4,7 +4,7 @@
     <title>Notification Test</title>
     <style></style>
     <<script type="text/javascript">
-    (function(p,u,s,h){
+    /*(function(p,u,s,h){
         p._pcq=p._pcq||[];
         p._pcq.push(['_currentTime',Date.now()]);
         s=u.createElement('script');
@@ -13,8 +13,23 @@
         s.src='https://cdn.pushcrew.com/js/adbeced39a40d02c9300ae1b53b08455.js';
         h=u.getElementsByTagName('script')[0];
         h.parentNode.insertBefore(s,h);
-    })(window,document);
+    })(window,document);*/
 </script>
+    
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async='async'></script>
+  <script>
+    var OneSignal = window.OneSignal || [];
+    OneSignal.push(["init", {
+      appId: "YOUR_APP_ID",
+      autoRegister: false, /* Set to true to automatically prompt visitors */
+      httpPermissionRequest: {
+        enable: true
+      },
+      notifyButton: {
+          enable: true /* Set to false to hide */
+      }
+    }]);
+  </script>
 </head>
 <body>
     <div style="width: 100%; height: 100%; display: flex;">
